@@ -5,8 +5,11 @@
 //  Created by Dima on 20.01.2020.
 //  Copyright © 2020 VGS. All rights reserved.
 //
-/*
+
 import Foundation
+#if !COCOAPODS
+import VGSCollectSDK
+#endif
 
 /// Supported scan data fields by Card.io
 @objc
@@ -51,4 +54,3 @@ public protocol VGSCardIOScanControllerDelegate {
     /// Asks `VGSTextField` where scanned data with `VGSConfiguration.FieldType` need to be set. Called after user select Done button, just before userDidFinishScan() delegate.
     @objc func textFieldForScannedData(type: CradIODataType) -> VGSTextField?
 }
-*/

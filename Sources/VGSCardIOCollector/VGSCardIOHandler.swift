@@ -5,13 +5,16 @@
 //  Created by Dima on 17.01.2020.
 //  Copyright © 2020 VGS. All rights reserved.
 //
-/*
+
 import Foundation
-#if canImport(UIKit)
+#if os(iOS)
 import UIKit
 #endif
 
-#if canImport(CardIO)
+#if !COCOAPODS
+import VGSCollectSDK
+#endif
+
 import CardIO
 import AVFoundation.AVCaptureDevice
 
@@ -47,6 +50,7 @@ extension VGSCardIOHandler: CardIOPaymentViewControllerDelegate {
     
     /// :nodoc:
     func userDidProvide(_ cardInfo: CardIOCreditCardInfo!, in paymentViewController: CardIOPaymentViewController!) {
+      /*
         guard let cardInfo = cardInfo, let cardIOdelegate = delegate else {
             delegate?.userDidFinishScan?()
             return
@@ -82,7 +86,7 @@ extension VGSCardIOHandler: CardIOPaymentViewControllerDelegate {
             textfield.setText(cvc)
         }
         cardIOdelegate.userDidFinishScan?()
+      */
     }
 }
-#endif
-*/
+
