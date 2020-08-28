@@ -102,13 +102,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		326FFB0B24F90DA00024A4F9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FD12B9A62304619100B670DD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FD12B9AE2304619100B670DD;
-			remoteInfo = VGSCollectSDK;
-		};
 		32CFC71124EBEEB300457B17 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FD12B9A62304619100B670DD /* Project object */;
@@ -644,7 +637,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				326FFB0C24F90DA00024A4F9 /* PBXTargetDependency */,
 			);
 			name = VGSCardIOCollector;
 			productName = VGSCardIOCollector;
@@ -978,11 +970,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		326FFB0C24F90DA00024A4F9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FD12B9AE2304619100B670DD /* VGSCollectSDK */;
-			targetProxy = 326FFB0B24F90DA00024A4F9 /* PBXContainerItemProxy */;
-		};
 		32CFC71224EBEEB300457B17 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 32CFC70624EBEEB300457B17 /* VGSCardScanCollector */;
