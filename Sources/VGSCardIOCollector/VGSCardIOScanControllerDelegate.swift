@@ -44,10 +44,10 @@ public protocol VGSCardIOScanControllerDelegate {
     // MARK: - Handle user ineraction with `Card.io`
     
     /// On user confirm scanned data by selecting Done button on `Card.io` screen.
-    @objc optional func userDidFinishScan()
+    @objc func userDidFinishScan()
     
     /// On user press Cancel buttonn on `Card.io` screen.
-    @objc optional func userDidCancelScan()
+    @objc func userDidCancelScan()
     
     // MARK: - Manage scanned data
     

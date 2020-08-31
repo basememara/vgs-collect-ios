@@ -9,14 +9,14 @@
 import Foundation
 #if os(iOS)
 import UIKit
+import CardIO
+import AVFoundation.AVCaptureDevice
 #endif
 
 #if !COCOAPODS
 import VGSCollectSDK
 #endif
 
-import CardIO
-import AVFoundation.AVCaptureDevice
 
 internal class VGSCardIOHandler: NSObject, VGSScanHandlerProtocol {
     
@@ -45,14 +45,13 @@ extension VGSCardIOHandler: CardIOPaymentViewControllerDelegate {
     
     /// :nodoc:
     func userDidCancel(_ paymentViewController: CardIOPaymentViewController!) {
-        delegate?.userDidCancelScan?()
+        delegate?.userDidCancelScan()
     }
     
     /// :nodoc:
     func userDidProvide(_ cardInfo: CardIOCreditCardInfo!, in paymentViewController: CardIOPaymentViewController!) {
-      /*
         guard let cardInfo = cardInfo, let cardIOdelegate = delegate else {
-            delegate?.userDidFinishScan?()
+            delegate?.userDidFinishScan()
             return
         }
         if !cardInfo.cardNumber.isEmpty, let textfield = cardIOdelegate.textFieldForScannedData(type: .cardNumber) {
@@ -85,8 +84,7 @@ extension VGSCardIOHandler: CardIOPaymentViewControllerDelegate {
         if let cvc = cardInfo.cvv, !cvc.isEmpty, let textfield = cardIOdelegate.textFieldForScannedData(type: .cvc) {
             textfield.setText(cvc)
         }
-        cardIOdelegate.userDidFinishScan?()
-      */
+        cardIOdelegate.userDidFinishScan()
     }
 }
 
