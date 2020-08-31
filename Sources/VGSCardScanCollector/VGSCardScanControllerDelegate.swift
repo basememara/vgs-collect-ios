@@ -7,6 +7,9 @@
 //
 
 import Foundation
+#if !COCOAPODS
+import VGSCollectSDK
+#endif
 
 /// Supported scan data fields by CardScan
 @objc
