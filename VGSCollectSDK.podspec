@@ -35,7 +35,7 @@ Pod::Spec.new do |spec|
   end
   
   spec.subspec 'CardIO' do |cardIO|
-    cardIO.source_files  = "Sources/VGSCardIOCollector", "Sources/VGSCardIOCollector/**/*.{swift}, "Sources/VGSCardIOCollector/**/*.{h, m}"
+    cardIO.source_files  = "Sources/VGSCardIOCollector", "Sources/VGSCardIOCollector/**/*.{swift}", "Sources/VGSCardIOCollector/**/*.{h, m}"
     cardIO.dependency "VGSCollectSDK/Core"
     cardIO.dependency "CardIOSDK", "5.5.2"
   end
