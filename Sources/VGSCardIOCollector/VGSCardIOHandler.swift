@@ -7,11 +7,9 @@
 //
 
 import Foundation
-#if os(iOS)
-import UIKit
 import CardIO
+import UIKit
 import AVFoundation.AVCaptureDevice
-#endif
 
 #if !COCOAPODS
 import VGSCollectSDK
