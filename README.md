@@ -66,8 +66,20 @@ carthage update --platform iOS
 
 If you don't need additional features like card scanning, you should add into your project only `VGSCollectSDK`. Other submodules can safely be deleted from Carthage Build folder.
 
-> NOTE: At this time, **Carthage** does not provide a way to build only specific repository submodules. All submodules and their dependencies will be built by default. However you can include into your project only submodules that you need.
 
+Check VGSCollecSDK submodules and required frameworks:
+
+| Build Frameworks | Core SDK  | CardIO | Card Scan   |
+| ----- | -------------- |---------------- |--------------- |
+| VGSCollectSDK   | ✔ | ✔ | ✔|
+| CardIO  |  | ✔ |  |
+| VGSCardIOCollector |  |✔ |  |
+| CardScan  |  |  |   ✔ |
+| VGSCardScanCollector |  |  | ✔ |
+
+Don't forget to import `VGSCardIOCollector` or `VGSCardScanCollector` in files where you use scan modules.
+
+> NOTE: At this time **Carthage** does not provide a way to build only specific repository submodules. All submodules and their dependencies will be built by default. However you can include into your project only submodules that you need.
 
 ## Usage
 
@@ -448,8 +460,9 @@ To follow `VGSCollectSDK` updates and changes check the [releases](https://githu
 ## Dependencies
 - iOS 10+
 - Swift 5
-- 3rd party libraries:
-  - CardIO(optional)
+- Optional 3rd party libraries:
+  - [CardIO](https://github.com/card-io/card.io-iOS-SDK)
+  - [Card Scan(Bouncer)](https://github.com/getbouncer/cardscan-ios)
 
 ## License
 
