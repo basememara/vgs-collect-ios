@@ -35,6 +35,10 @@ internal class VGSCardScanHandler: NSObject, VGSScanHandlerProtocol {
     func dismissScanVC(animated: Bool, completion: (() -> Void)?) {
         view?.dismiss(animated: animated, completion: completion)
     }
+  
+    static func isCompatible() -> Bool {
+      return ScanViewController.isCompatible()
+    }
 }
 
 /// :nodoc:

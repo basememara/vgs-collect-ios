@@ -58,4 +58,9 @@ public class VGSCardScanController {
     public func dismissCardScanner(animated: Bool, completion: (() -> Void)?) {
         scanHandler?.dismissScanVC(animated: animated, completion: completion)
     }
+  
+    /// Check if CardScan can run on current device.
+    static public func isCompatible() -> Bool {
+      return VGSCardScanHandler.isCompatible()
+    }
 }
