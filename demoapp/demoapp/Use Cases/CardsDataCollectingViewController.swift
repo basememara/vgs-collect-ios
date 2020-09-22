@@ -50,9 +50,7 @@ class CardsDataCollectingViewController: UIViewController {
         ]
 
         
-        // set preferred device camera
-//        scanController.preferredCameraPosition = .front
-        // set VGSCardIOScanDelegate
+        // set VGSCardScanDelegate
         scanController.delegate = self
 
         // Observing text fields. The call back return all textfields with updated states. You also can use VGSTextFieldDelegate
@@ -174,9 +172,15 @@ class CardsDataCollectingViewController: UIViewController {
         }
     }
     
-    // Start CardIO scanning
+    // Start CardScan scanning
     @IBAction func scanAction(_ sender: Any) {
+      
+      /// Check if CardScan can run on current device
+      if VGSCardScanController.isCompatible() {
         scanController.presentCardScanner(on: self, animated: true, completion: nil)
+      } else {
+        print("This device not compatible with CardScan")
+      }
     }
     
     // Upload data from TextFields to VGS
