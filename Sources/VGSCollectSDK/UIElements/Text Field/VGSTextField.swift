@@ -95,6 +95,18 @@ public class VGSTextField: UIView {
             
             if configuration.type == .cardNumber {
                 textField.textContentType = .creditCardNumber
+                textField.autocorrectionType = .yes
+            }
+            
+            switch configuration.type {
+            case .cardHolderName:
+                textField.textContentType = .name
+                textField.autocorrectionType = .yes
+            case .cardNumber:
+                textField.textContentType = .creditCardNumber
+                textField.autocorrectionType = .yes
+            default:
+                break
             }
             
             if let pattern = configuration.formatPattern {
